@@ -1,0 +1,65 @@
+$s-075: 0.75rem;
+$s-875: 0.875rem;
+$s-1: 1rem;
+$s-125: 1.25rem;
+$s-15: 1.5rem;
+$s-175: 1.75rem;
+$s-25: 2.5rem;
+$s-275: 2.75rem;
+$s-5: 5rem;
+$s-7: 15rem;
+
+$type-scale: (
+  small: (
+    075: $s-075,
+    875: $s-875,
+    1: $s-1,
+    125: $s-125,
+    15: $s-15,
+    175: $s-175,
+    25: $s-25,
+    275: $s-275,
+    5: $s-5,
+    7: $s-7,
+  ),
+);
+
+$tag: (
+  tag: (
+    body: var(--fs-1),
+    primary-heading: var(--fs-7),
+    secondary-heading: var(--fs-25),
+    third-heading: var(--fs-175),
+    subheading: var(--fs-125),
+  ),
+);
+
+$type-fw: (
+  font-weight: (
+    reguler: 400,
+    medium: 500,
+    semi-bold: 600,
+    bold: 700,
+  ),
+);
+
+$type-size: (
+  size: (
+    50: 0.5rem,
+    100: 1rem,
+    150: 1.5rem,
+    200: 2rem,
+    300: 3rem,
+    400: 4rem,
+    500: 5rem,
+  ),
+);
+
+$type-ff: (
+  ff-primary: (
+    primary: "'Poppins',sans-serif",
+  ),
+  ff-secondary: (
+    secondary: "'Lora', sans-serif",
+  ),
+);

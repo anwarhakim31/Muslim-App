@@ -1,0 +1,48 @@
+@use "../../abstracts/index" as *;
+
+#timer {
+  position: absolute;
+  left: 25px;
+
+  @include breakpoint-up(lg) {
+    left: 0;
+    bottom: -30%;
+    transform: translateY(-30%);
+    -webkit-transform: translateY(-30%);
+    -moz-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
+    -o-transform: translateY(-30%);
+  }
+
+  @include breakpoint-down(md) {
+    right: 30px;
+    top: -130px;
+  }
+
+  @include breakpoint-up(md) {
+    bottom: 30px;
+    left: 0;
+  }
+
+  p {
+    font-size: 0.8rem;
+
+    @include breakpoint-up(md) {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint-up(lg) {
+      font-size: 1.5rem;
+    }
+  }
+
+  span {
+    font-size: 0.75rem;
+    @include breakpoint-up(md) {
+      font-size: 1.25rem;
+    }
+    @include breakpoint-up(lg) {
+      font-size: 1.5rem;
+    }
+  }
+}

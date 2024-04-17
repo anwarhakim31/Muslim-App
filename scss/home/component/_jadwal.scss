@@ -1,0 +1,121 @@
+@use "../../abstracts/" as *;
+.jadwal-sholat {
+  width: 100%;
+  background-color: var(--clr-neutral-100);
+  @include br(var(--size-100));
+  @include tranform(-80px);
+  box-shadow: 0 0.5rem 0.5rem var(--clr-neutral-800);
+  padding: var(--size-100) var(--size-100);
+  background: var(--clr-neutral-100);
+  position: relative;
+  @include breakpoint-down(lg) {
+    @include tranform(-60px);
+  }
+
+  @include breakpoint-down(md) {
+    @include tranform(-60px);
+    padding: var(--size-100) var(--size-100);
+  }
+
+  @include breakpoint-down(sm) {
+    @include tranform(-50px);
+    padding: var(--size-100) var(--size-100);
+  }
+
+  .box {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--clr-neutral-800);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+
+    &.active {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        inset: -0.2rem;
+        z-index: -1;
+
+        background: conic-gradient(
+          from var(--gradient-angle),
+          var(--clr-primary-100),
+          var(--clr-accent-400),
+          var(--clr-accent-500)
+        );
+        border-radius: inherit;
+        animation: rotation 4s linear infinite;
+        opacity: 1;
+      }
+      &::after {
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+      }
+    }
+
+    @include br(var(--size-50));
+
+    @include breakpoint-up(sm) {
+      flex-direction: row;
+
+      .box-image {
+        width: 50%;
+      }
+
+      .box-content {
+        width: 60%;
+      }
+    }
+
+    .box-image {
+      width: 100%;
+      padding: var(--size-50);
+      margin: 0 auto;
+      background: var(--clr-neutral-100);
+      border: 2px solid var(--clr-neutral-800);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        user-select: none;
+      }
+    }
+
+    .box-content {
+      width: 100%;
+      @include flex(space-around, center, null);
+      flex-direction: column;
+      background: var(--clr-neutral-100);
+      border: 2px solid var(--clr-neutral-800);
+
+      background: linear-gradient(
+        180deg,
+        var(--clr-neutral-800),
+        var(--clr-primary-500)
+      );
+
+      @include breakpoint-down(sm) {
+        p {
+          font-size: 0.5rem;
+        }
+        span {
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--size-100);
+
+    // @include breakpoint-down(md) {
+    //   grid-template-columns: repeat(1, minmax(100px, 1fr));
+    //   grid-template-rows: repeat(5, 75px);
+    // }
+  }
+}

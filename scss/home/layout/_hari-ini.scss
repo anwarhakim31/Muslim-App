@@ -1,0 +1,72 @@
+@use "../../abstracts/index" as *;
+
+.hari-ini {
+  .wrapper-grid {
+    padding-bottom: var(--size-200);
+
+    @include breakpoint-down(md) {
+      grid-template-rows: auto 250px auto auto 250px auto;
+    }
+    @include breakpoint-up(md) {
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+      row-gap: var(--size-500);
+      padding-bottom: var(--size-400);
+    }
+
+    .card {
+      .content {
+        .arab-kaligrafi {
+          font-size: var(--fs-5);
+          @include font-face("DMS Saleem QuranFont Regular");
+
+          font-family: "DMS Saleem QuranFont Regular";
+          text-overflow: ellipsis;
+          overflow: hidden;
+          text-wrap: nowrap;
+        }
+        @include breakpoint-down(md) {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+        }
+      }
+      &.nama-allah {
+        background: url("../../images/card/Asmaul Husna.jpeg");
+        background-blend-mode: darken;
+        @include breakpoint-down(md) {
+          .details {
+            margin-bottom: auto;
+          }
+          .text {
+            margin-bottom: auto;
+          }
+        }
+      }
+      &.Doa1 {
+        background: url("../../images/card/Doa1.jpeg");
+        background-size: cover;
+        background-position: center;
+      }
+      &.Doa2 {
+        background: url("../../images/card/Doa2.jpg");
+        background-size: cover;
+        background-position: 10% 30%;
+      }
+      &.Dzikir2 {
+        background: url("../../images/card/Dzikir2.jpeg");
+        background-size: cover;
+        background-position: 10% 75%;
+      }
+      &.Dzikir1 {
+        background: url("../../images/card/Dzikir1.jpeg");
+        background-size: cover;
+        background-position: 10% 90%;
+      }
+    }
+  }
+
+  @include breakpoint-down(md) {
+    padding-bottom: 7rem;
+  }
+}

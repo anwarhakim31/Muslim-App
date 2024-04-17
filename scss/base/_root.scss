@@ -1,0 +1,33 @@
+@use "../abstracts/index" as *;
+
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $sizes, $font-size in $type-scale {
+    @each $font, $value in $font-size {
+      --fs-#{$font}: #{$value};
+    }
+  }
+
+  @each $sizes, $pad-size in $type-size {
+    @each $size, $value in $pad-size {
+      --size-#{$size}: #{$value};
+    }
+  }
+
+  @each $names, $font-weight in $type-fw {
+    @each $name, $value in $font-weight {
+      --fw-#{$name}: #{$value};
+    }
+  }
+
+  @each $ff-name, $font-family in $type-ff {
+    @each $name, $value in $font-family {
+      --ff-#{$name}: #{$value};
+    }
+  }
+}

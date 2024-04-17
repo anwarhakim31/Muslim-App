@@ -1,0 +1,139 @@
+@use "breakpoints" as *;
+
+@mixin flex($jc, $ac, $gap) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ac;
+  gap: $gap;
+}
+
+@mixin button($br) {
+  border-radius: $br;
+  -webkit-border-radius: $br;
+  -moz-border-radius: $br;
+  -ms-border-radius: $br;
+  -o-border-radius: $br;
+  cursor: pointer;
+}
+
+@mixin ff() {
+  font-family: "Poppins", sans-serif;
+}
+
+@mixin breakpoint-up($point) {
+  @if map-has-key($breakpoint, $point) {
+    @media (min-width: map-get($breakpoint, $point)) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-down($point) {
+  @if map-has-key($breakpoint, $point) {
+    @media (max-width: map-get($breakpoint, $point)) {
+      @content;
+    }
+  }
+}
+
+@mixin landscape() {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin br($size) {
+  border-radius: $size;
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  -ms-border-radius: $size;
+  -o-border-radius: $size;
+}
+
+@mixin tranform($size) {
+  transform: translateY($size);
+  -webkit-transform: translateY($size);
+  -moz-transform: translateY($size);
+  -ms-transform: translateY($size);
+  -o-transform: translateY($size);
+}
+
+@mixin scroll() {
+  ::-webkit-scrollbar {
+    width: var(--size-100);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--clr-neutral-300);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--clr-primary-500);
+    @include br(var(--size-100));
+  }
+}
+
+@mixin font-face($font-family-name) {
+  @font-face {
+    font-family: $font-family-name;
+
+    src: url("../../font/_PDMS_Saleem_QuranFont Regular.ttf") format("truetype");
+
+    font-weight: regular;
+    font-style: normal;
+  }
+}
+
+@mixin loading() {
+  .loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(25px);
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+
+    .circle {
+      width: 75px;
+      height: 75px;
+      border: var(--size-100) solid var(--clr-neutral-300);
+      @include br(50%);
+      border-top-color: var(--clr-primary-100);
+      animation: spin 1s linear infinite;
+      -webkit-animation: spin 1s linear infinite;
+    }
+
+    .progress {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-45%, -50%);
+      -webkit-transform: translate(-45%, -50%);
+      -moz-transform: translate(-45%, -50%);
+      -ms-transform: translate(-45%, -50%);
+      -o-transform: translate(-45%, -50%);
+      color: var(--clr-primary-500);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+    }
+  }
+}
