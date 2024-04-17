@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/alquranL.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muslim App</title>
+    <link rel="stylesheet" href="assets/style/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body class="bg-neutral-200">
+    <header class="lg bg-primary-500 p-block-50">
+      <div class="container">
+        <div class="d-flex-space">
+          <div class="logo">
+            <a href="#">
+              <img src="assets/images/alquranL.png" alt="" />
+            </a>
+          </div>
+          <nav role="list" class="primary-navigation" id="primary-navigation">
+            <ul class="nav-list" role="nav-list">
+              <li class="list"><a class="active" href="#">Home</a></li>
+              <li class="list">
+                <a href="Hadist.html?/bukhari/jumlah:100">Hadist</a>
+              </li>
+
+              <li class="list"><a href="Doa.html">Doa</a></li>
+              <li class="list"><a href="Asmaul-Husna.html">Asmaul husna</a></li>
+              <li class="list">
+                <a href="https://al-quran-hakim.vercel.app/">Al-Quran</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="md">
+      <nav class="primary-navigation">
+        <ul class="nav-list" role="list">
+          <li class="list">
+            <a href="https://al-quran-hakim.vercel.app/"
+              ><img src="assets/images/navIcon/quran.png" alt="" />Quran</a
+            >
+          </li>
+          <li class="list">
+            <a href="Doa.html"
+              ><img src="assets/images/navIcon/pray.png" alt="" />Doa</a
+            >
+          </li>
+          <li class="list">
+            <a href="#" id="home"
+              ><img src="assets/images/alquranL.png" alt="" /> Home</a
+            >
+          </li>
+          <li class="list">
+            <a href="Hadist.html"
+              ><img src="assets/images/navIcon/book.png" alt="" />Hadist</a
+            >
+          </li>
+          <li class="list">
+            <a href="Asmaul-Husna.html"
+              ><img src="assets/images/navIcon/islam.png" alt="" />Nama</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div
+          class="hero-content d-flex p-top-100"
+          style="--jc: center; --ac: center; --gap: null"
+        >
+          <div class="wrapper text-center text-neutral-100">
+            <div class="location fw-semi-bold p-bot-50">
+              <small
+                class="d-flex text-neutral-100"
+                style="--jc: center; --ac: center; --gap: 0.5rem"
+              >
+                <p class="kota fw-reguler">Indonesia</p>
+                <i class="ph-duotone ph-map-pin kota"></i>
+              </small>
+            </div>
+            <p class="fw-semi-bold fs-secondary-heading date ff-secondary">
+              Senin, 15 april
+            </p>
+
+            <span class="fw-reguler fs-third-heading hijriyah ff-secondary"
+              >- ------ ----</span
+            >
+            <h1 class="fs-primary-heading d-flex">
+              <span class="hours fs-primary-heading ff-secondary">--</span>
+              <div class="block">
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <span class="minutes fs-primary-heading ff-secondary">--</span>
+            </h1>
+            <div class="container">
+              <div id="timer"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="jadwal-sholat wrapper">
+            <audio id="audio-player" src="assets/audio/mecca_56_22.mp3"></audio>
+            <div class="box waktu-sholat waktu-shubuh">
+              <div class="box-image">
+                <img src="assets/images/jadwal/Subuh-256.png" alt="" />
+              </div>
+              <div class="d-flex text-neutral-100 box-content">
+                <p class="nama-sholat fw-bold fs-subheading" id="shubuh">
+                  Shubuh
+                </p>
+                <span class="fw-reguler" id="waktu-shubuh">--:--</span>
+              </div>
+            </div>
+            <div class="box waktu-sholat waktu-dzuhur">
+              <div class="box-image">
+                <img src="assets/images/jadwal/dzhur.png" alt="" />
+              </div>
+              <div class="d-flex text-neutral-100 box-content">
+                <p class="nama-sholat fw-bold fs-subheading" id="dzuhur">
+                  Dzuhur
+                </p>
+                <span class="fw-reguler" id="waktu-dzuhur">--:--</span>
+              </div>
+            </div>
+            <div class="box waktu-sholat waktu-ashar">
+              <div class="box-image">
+                <img src="assets/images/jadwal/ashar.png" alt="" />
+              </div>
+              <div class="d-flex text-neutral-100 box-content">
+                <p class="nama-sholat fw-bold fs-subheading" id="ashar">
+                  Ashar
+                </p>
+                <span class="fw-reguler" id="waktu-ashar">--:--</span>
+              </div>
+            </div>
+            <div class="box waktu-sholat waktu-magrib">
+              <div class="box-image">
+                <img src="assets/images/jadwal/magrib.png" alt="" />
+              </div>
+              <div class="d-flex text-neutral-100 box-content">
+                <p class="nama-sholat fw-bold fs-subheading" id="magrib">
+                  Magrib
+                </p>
+                <span class="fw-reguler" id="waktu-magrib">--:--</span>
+              </div>
+            </div>
+            <div class="box waktu-sholat waktu-isya">
+              <div class="box-image">
+                <img src="assets/images/jadwal/isya.png" alt="" />
+              </div>
+              <div class="d-flex text-neutral-100 box-content">
+                <p class="nama-sholat fw-bold fs-subheading isya">Isya</p>
+                <span class="fw-reguler" id="waktu-isya">--:--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hari-ini">
+        <div class="container">
+          <div class="wrapper-grid">
+            <a href="" class="card Doa1">
+              <div class="content text-neutral-100">
+                <div class="details d-flex-space">
+                  <span class="ff-secondary fs-75 fs-75"> Doa Harian </span>
+                  <span class="ff-secondary fs-75"> Lebih Banyak ></span>
+                </div>
+                <div class="text">
+                  <h3 class="text-arab DoaArab">الرَّحْمـٰنُ</h3>
+                  <p class="text-arti DoaLatin">Yang Maha Suci</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="card nama-allah">
+              <div class="content text-neutral-100">
+                <div class="details d-flex-space">
+                  <span class="ff-secondary fs-75"> 99 Nama Allah </span>
+                  <span class="ff-secondary fs-75"> Lebih Banyak ></span>
+                </div>
+                <div class="text">
+                  <h3 class="arab-kaligrafi text-center" id="husnaA2">
+                    الرَّحْمـٰنُ
+                  </h3>
+                  <p class="arti text-center p-top-50" id="husnaL2">
+                    Yang Maha Suci
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="card Dzikir1">
+              <div class="content text-neutral-100">
+                <div class="details d-flex-space">
+                  <span class="ff-secondary fs-75"> Hadist Harian</span>
+                  <span class="ff-secondary fs-75"> Lebih Banyak ></span>
+                </div>
+                <div class="text">
+                  <h3 class="text-arab HadistArab">
+                    الرَّحْمـٰنُالرَّحْمـٰنُالرَّحْمـٰنُ
+                  </h3>
+                  <p class="text-arti HadistLatin">Yang Maha Suci</p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="card Doa2">
+              <div class="content text-neutral-100">
+                <div class="details d-flex-space">
+                  <span class="ff-secondary fs-75"> Doa harian</span>
+                  <span class="ff-secondary fs-75"> Lebih Banyak ></span>
+                </div>
+                <div class="text">
+                  <h3 class="text-arab DoaArab">الرَّحْمـٰنُ</h3>
+                  <p class="text-arti DoaLatin">Yang Maha Suci</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="" class="card nama-allah">
+              <div class="content text-neutral-100">
+                <div class="details d-flex-space">
+                  <span class="ff-secondary fs-75"> 99 Nama Allah </span>
+                  <span class="ff-secondary fs-75"> Lebih Banyak ></span>
+                </div>
+                <div class="text">
+                  <h3 class="arab-kaligrafi text-center" id="husnaA1">
+                    الرَّحْمـٰنُ
+                  </h3>
+                  <p class="arti text-center p-top-50" id="husnaL1">
+                    Yang Maha Suci
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="" class="card Dzikir2">
+              <div class="content text-neutral-100">
+                <div class="details d-flex-space">
+                  <span class="ff-secondary fs-75"> Hadist Harian</span>
+                  <span class="ff-secondary fs-75"> Lebih Banyak ></span>
+                </div>
+                <div class="text">
+                  <h3 class="text-arab HadistArab">الرَّحْمـٰنُ</h3>
+                  <p class="text-arti HadistLatin">Yang Maha Suci</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-primary-500 p-block-100">
+      <div>
+        <a href="assets/download/MuslimApp.apk" class="" download>
+          <img src="assets/images/Google play.png" alt="" width="200px" />
+        </a>
+      </div>
+      <p class="p-top-100 text-neutral-200 text-center fs-75">
+        Copyright &copy; 2024 Anwar Hakim All Right Reserved
+      </p>
+    </footer>
+    <div class="loading">
+      <div class="circle"></div>
+      <div class="progress">0%</div>
+    </div>
+
+    <script src="assets/JS/jadwal.js"></script>
+    <script src="assets/JS/index.js"></script>
+  </body>
+</html>
