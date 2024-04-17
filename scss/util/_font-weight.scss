@@ -1,0 +1,8 @@
+@use "../abstracts/index" as *;
+@each $weights, $fw-size in $type-fw {
+  @each $weight, $value in $fw-size {
+    .fw-#{$weight} {
+      font-weight: $value;
+    }
+  }
+}

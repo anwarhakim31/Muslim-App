@@ -1,0 +1,35 @@
+@use "../abstracts/index" as *;
+
+@each $sizes, $font-size in $type-scale {
+  @each $font, $value in $font-size {
+    .fs-#{$font} {
+      font-size: $value;
+    }
+  }
+}
+
+@each $sizes, $font-size in $tag {
+  @each $font, $value in $font-size {
+    @if $font == "primary-heading" {
+      .fs-#{$font} {
+        font-size: clamp(var(--fs-275), 11.95vw + -1.324rem, $value);
+      }
+    } @else if $font == "body" {
+      .fs-#{$font} {
+        font-size: $value;
+      }
+    } @else if $font == "secondary-heading" {
+      .fs-#{$font} {
+        font-size: clamp(var(--fs-75), 0.1338rem + 2.6291vw, $value);
+      }
+    } @else if $font == "third-heading" {
+      .fs-#{$font} {
+        font-size: clamp(var(--fs-75), 0.1338rem + 2.6291vw, $value);
+      }
+    } @else {
+      .fs-#{$font} {
+        font-size: clamp(0.75rem, -0.1021rem + 1.5023vw, $value);
+      }
+    }
+  }
+}

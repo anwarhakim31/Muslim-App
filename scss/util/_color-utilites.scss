@@ -1,0 +1,12 @@
+@use "../abstracts/index" as *;
+
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{$shade} {
+      color: $value;
+    }
+    .bg-#{$color}-#{$shade} {
+      background: $value;
+    }
+  }
+}

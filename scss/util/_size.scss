@@ -1,0 +1,43 @@
+@use "../abstracts/index" as *;
+
+@each $pos, $padd-size in $type-size {
+  @each $size, $value in $padd-size {
+    @if $size == 400 {
+      .p-block-#{$size} {
+        padding-block: clamp(var(--size-300), 5vw, $value);
+      }
+    } @else if $size == 500 {
+      .p-block-#{$size} {
+        padding-block: clamp(var(--size-200), 5vw, $value);
+      }
+    } @else if $size == 300 {
+      .p-block-#{$size} {
+        padding-block: clamp(var(--size-50), 5vw, $value);
+      }
+    } @else if $size == 200 {
+      .p-block-#{$size} {
+        padding-block: clamp(var(--size-50), 5vw, $value);
+      }
+    } @else if $size == 100 {
+      .p-block-#{$size} {
+        padding-block: clamp(var(--size-50), 5vw, $value);
+      }
+    } @else {
+      .p-block-#{$size} {
+        padding-block: clamp(0.5rem, 5vw, $value);
+      }
+    }
+  }
+
+  @each $size, $value in $padd-size {
+    .p-bot-#{$size} {
+      padding-bottom: $value;
+    }
+  }
+
+  @each $size, $value in $padd-size {
+    .p-top-#{$size} {
+      padding-top: $value;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use "../abstracts/index" as *;
+
+@each $nameff, $font-family in $type-ff {
+  @each $name, $value in $font-family {
+    .ff-#{$name} {
+      font-family: #{$value};
+    }
+  }
+}
