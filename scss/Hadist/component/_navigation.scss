@@ -1,0 +1,153 @@
+@use "../../abstracts/index" as *;
+
+.hadist {
+  .form-area {
+    position: relative;
+    .sort {
+      background-color: var(--clr-neutral-100);
+      max-width: 220px;
+      margin-left: auto;
+      padding: var(--size-50) var(--size-100);
+      margin-bottom: var(--size-100);
+      @include br(0.5rem);
+      cursor: pointer;
+      user-select: none;
+      border: 2px solid var(--clr-neutral-800);
+
+      span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+      }
+
+      @include breakpoint-down(md) {
+        font-size: 0.75rem;
+      }
+
+      @include breakpoint-down(xs) {
+        font-size: 0.6rem;
+      }
+
+      i {
+        font-weight: var(--fw-semi-bold) !important;
+      }
+
+      &:hover {
+        border: 2px solid var(--clr-primary-500);
+      }
+    }
+    .detail {
+      padding: 0.5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      @include breakpoint-down(md) {
+        font-size: 0.75rem;
+        transform: translate(-50%, -180%);
+        -webkit-transform: translate(-50%, -180%);
+        -moz-transform: translate(-50%, -180%);
+        -ms-transform: translate(-50%, -180%);
+        -o-transform: translate(-50%, -180%);
+      }
+      @include breakpoint-down(xs) {
+        font-size: 0.6rem;
+        transform: translate(-50%, -180%);
+        -webkit-transform: translate(-50%, -180%);
+        -moz-transform: translate(-50%, -180%);
+        -ms-transform: translate(-50%, -180%);
+        -o-transform: translate(-50%, -180%);
+      }
+    }
+
+    .select {
+      background-color: var(--clr-neutral-100);
+      width: 200px;
+      user-select: none;
+      position: relative;
+      margin-bottom: var(--size-100);
+      border: 2px solid var(--clr-neutral-800);
+      @include breakpoint-down(md) {
+        font-size: 0.75rem;
+        width: 150px;
+      }
+      @include breakpoint-down(xs) {
+        font-size: 0.6rem;
+      }
+
+      &:hover {
+        border: 2px solid var(--clr-primary-500);
+      }
+
+      @include br(0.5rem);
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(15%, 37%);
+        -webkit-transform: translate(15%, 37%);
+        -moz-transform: translate(15%, 37%);
+        -ms-transform: translate(15%, 37%);
+        -o-transform: translate(15%, 37%);
+        pointer-events: none;
+        user-select: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+
+        @include breakpoint-down(xs) {
+          transform: translate(45%, 60%);
+          -webkit-transform: translate(45%, 60%);
+          -moz-transform: translate(45%, 60%);
+          -ms-transform: translate(45%, 60%);
+          -o-transform: translate(45%, 60%);
+        }
+      }
+
+      .pilih-perawi {
+        text-align: center;
+        width: 100%;
+        padding: var(--size-50) 0 0.5rem 3rem;
+        @include br(0.5rem);
+        cursor: pointer;
+        border: 0;
+        outline: none;
+        font-weight: var(--fw-semi-bold) !important;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        line-height: 1.6;
+
+        @include breakpoint-down(md) {
+          padding: var(--size-50) 0 0.5rem 2.5rem;
+        }
+
+        @include breakpoint-down(xs) {
+          padding: var(--size-50) 0 0.5rem 2rem;
+        }
+      }
+
+      i {
+        position: absolute;
+        right: 5px;
+        top: 32%;
+        font-weight: var(--fw-semi-bold) !important;
+        user-select: none;
+        pointer-events: none;
+
+        @include breakpoint-down(md) {
+          right: 5px;
+          top: 37%;
+        }
+
+        @include breakpoint-down(xs) {
+          right: 5px;
+          top: 40%;
+        }
+      }
+    }
+  }
+}

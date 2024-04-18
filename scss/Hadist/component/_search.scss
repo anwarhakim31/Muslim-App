@@ -1,0 +1,28 @@
+@use "../../abstracts/index" as *;
+
+.search-area {
+  width: 250px;
+  margin-inline: auto;
+  .search {
+    @include flex(space-between, center, null);
+    background: var(--clr-neutral-100);
+    @include br(var(--size-50));
+    padding-inline: var(--size-50);
+    border: 2px solid var(--clr-neutral-800);
+
+    .search-icon {
+      font-size: var(--fs-15);
+    }
+
+    .search-input {
+      border: 0;
+      outline: none;
+      background-color: none;
+      padding: var(--size-50);
+      width: 100%;
+    }
+    &:focus-within {
+      border: 2px solid var(--clr-primary-500);
+    }
+  }
+}
