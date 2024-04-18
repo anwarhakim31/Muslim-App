@@ -1,0 +1,12 @@
+@use "../../abstracts/index" as *;
+footer {
+  img {
+    margin-inline: auto;
+  }
+  p {
+    user-select: none;
+  }
+  @include breakpoint-down(md) {
+    display: none;
+  }
+}
