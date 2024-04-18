@@ -3,13 +3,6 @@ const pilihPerawi = document.querySelector(".pilih-perawi");
 const jumlahHadist = document.querySelector(".jumlah-hadist");
 const loading = document.querySelector(".loading");
 
-const url = new URL(window.location.href);
-const newurl = new URL(window.location.href);
-const pathname = url.search.slice(2);
-let part = pathname.split(":");
-
-let harian = pathname.split("/")[0];
-
 let perawis;
 let jumlah;
 
