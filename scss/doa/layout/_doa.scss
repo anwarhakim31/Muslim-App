@@ -1,0 +1,49 @@
+@use "../../abstracts/index" as *;
+
+.doa {
+  padding-top: clamp(var(--size-100), 5vw + 5vw, 10rem);
+
+  @include breakpoint-down(md) {
+    padding-bottom: 7rem;
+  }
+
+  h1 {
+    font-size: clamp(var(--fs-25), 5vw, 3rem);
+    color: var(--clr-neutral-800);
+  }
+
+  .bgback {
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+    .div {
+      background: linear-gradient(
+        180deg,
+        var(--clr-primary-500),
+        var(--clr-primary-500),
+        var(--clr-primary-100)
+      );
+      position: absolute;
+
+      width: 100vw;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      @include breakpoint-down(md) {
+        background: var(--clr-neutral-200);
+      }
+    }
+
+    .intro {
+      padding: 2rem 0;
+      width: calc((100% + 10rem) - (40vw));
+      margin: 0 auto;
+      color: var(--clr-neutral-100);
+      @include breakpoint-down(md) {
+        color: var(--clr-neutral-800);
+        width: 100%;
+      }
+    }
+  }
+}
