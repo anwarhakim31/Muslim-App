@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muslim App</title>
+    <link rel="stylesheet" href="assets/style/css/doa.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/images/alquranL.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body class="bg-neutral-200">
+    <header class="lg bg-primary-500 p-block-50">
+      <div class="container">
+        <div class="d-flex-space">
+          <div class="logo">
+            <a href="index.html">
+              <img src="assets/images/alquranL.png" alt="" />
+            </a>
+          </div>
+          <nav role="list" class="primary-navigation" id="primary-navigation">
+            <ul class="nav-list" role="nav-list">
+              <li class="list"><a href="index.html">Home</a></li>
+              <li class="list">
+                <a href="Hadist.html?/bukhari/jumlah:100">Hadist</a>
+              </li>
+              <li class="list"><a class="active" href="Doa.html">Doa</a></li>
+
+              <li class="list"><a href="Asmaul-Husna.html">Asmaul husna</a></li>
+              <li class="list">
+                <a href="https://al-quran-hakim.vercel.app/">Al-Quran</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="md">
+      <nav class="primary-navigation">
+        <ul class="nav-list" role="list">
+          <li class="list">
+            <a href="https://al-quran-hakim.vercel.app/"
+              ><img src="assets/images/navIcon/quran.png" alt="" />Quran</a
+            >
+          </li>
+          <li class="list">
+            <a href="Doa.html"
+              ><img src="assets/images/navIcon/pray.png" alt="" />Doa</a
+            >
+          </li>
+          <li class="list">
+            <a href="index.html" id="home"
+              ><img src="assets/images/alquranL.png" alt="" /> Home</a
+            >
+          </li>
+          <li class="list">
+            <a href="Hadist.html?/bukhari/jumlah:100"
+              ><img src="assets/images/navIcon/book.png" alt="" />Hadist</a
+            >
+          </li>
+          <li class="list">
+            <a href="Asmaul-Husna.html"
+              ><img src="assets/images/navIcon/islam.png" alt="" />Nama</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <section class="doa">
+        <h1 class="ff-primary fw-semi-bold text-center">Doa Islam</h1>
+        <div class="bgback">
+          <p class="intro text-center fs-875 p-block-100">
+            doa adalah suatu sarana ibadah untuk memohon dan meminta pertolongan
+            Allah swt. yang maha kuasa atas segala sesuatu yang terjadi di muka
+            bumi ini. Doa juga merupakan tanda bahwa manusia sangat membutuhkan
+            Allah swt. dan Doa ini terdapat beberapa sumber yaitu quran, hadits,
+            pilihan, harian, ibadah, haji, lainnya
+          </p>
+          <div class="div"></div>
+        </div>
+
+        <div class="container">
+          <form class="form-area d-flex-space">
+            <div class="select">
+              <span>Sumber:</span>
+              <select
+                class="pilih-sumber"
+                name="pilih-sumber"
+                id="pilih-sumber"
+              >
+                <option value="semua">Semua</option>
+                <option value="quran">Quran</option>
+                <option value="hadits">Hadist</option>
+                <option value="pilihan">Pilihan</option>
+                <option value="harian">Harian</option>
+                <option value="ibadah">Ibadah</option>
+                <option value="haji">Haji</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+              <i class="ph icon-sumber ph-caret-down"></i>
+            </div>
+
+            <div
+              class="sort d-flex"
+              style="--jc: center; --ac: center; --gap: 0.5rem"
+            >
+              <span>Sort By:</span>
+              <p class="ff-primary d-flex-space fw-semi-bold">
+                Ascending<i class="ph ph-arrow-up icon-sort"></i>
+              </p>
+            </div>
+          </form>
+          <ul class="wrapper-doa"></ul>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-primary-500 p-block-100">
+      <div>
+        <a href="assets/download/MuslimApp.apk" download>
+          <img src="assets/images/Google play.png" alt="" width="200px" />
+        </a>
+      </div>
+      <p class="p-top-100 text-neutral-200 text-center fs-75">
+        Copyright &copy; 2024 Anwar Hakim All Right Reserved
+      </p>
+    </footer>
+    <div class="toTop">
+      <i class="ph ph-arrow-up"></i>
+    </div>
+    <div class="loading">
+      <div class="circle"></div>
+      <div class="progress"></div>
+    </div>
+    <div class="notification">
+      <p>Berhasil Di Salin!</p>
+    </div>
+
+    <script type="module" src="assets/JS/doa.js"></script>
+  </body>
+</html>
