@@ -1,0 +1,35 @@
+@use "../../abstracts/index" as *;
+
+.sort {
+  background-color: var(--clr-neutral-100);
+  max-width: 220px;
+  margin-left: auto;
+  padding: var(--size-50) var(--size-100);
+  margin-bottom: var(--size-100);
+  @include br(0.5rem);
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid var(--clr-neutral-800);
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+  }
+
+  @include breakpoint-down(md) {
+    font-size: 0.75rem;
+  }
+
+  @include breakpoint-down(xs) {
+    font-size: 0.6rem;
+  }
+
+  i {
+    font-weight: var(--fw-semi-bold) !important;
+  }
+
+  &:hover {
+    border: 2px solid var(--clr-primary-500);
+  }
+}

@@ -1,0 +1,29 @@
+@use "../../abstracts/index" as *;
+
+.toTop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: var(--size-50);
+  background: linear-gradient(
+    90deg,
+    var(--clr-primary-500),
+    var(--clr-primary-200)
+  );
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-125);
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid var(--clr-neutral-100);
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  @include breakpoint-down(md) {
+    bottom: 110px;
+  }
+}
