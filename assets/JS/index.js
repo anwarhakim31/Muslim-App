@@ -259,7 +259,7 @@ async function callHadist() {
 
       parent.setAttribute(
         "href",
-        `https://anwarhakimz.github.io/Muslim-App/Hadist.html?/hadist/${perawi}/nomor:${nomor}`
+        `https://anwarhakim31.github.io/MuslimApp/Hadist.html?/hadist/${perawi}/nomor:${nomor}`
       );
     });
 
