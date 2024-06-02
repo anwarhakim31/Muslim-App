@@ -38,14 +38,14 @@ if (jumlah === null || jumlah === undefined || isNaN(jumlah)) {
   jumlah = 100;
 }
 
-if (window.location.href === "https://anwarhakimz.github.io/Muslim-App") {
+if (window.location.href === "https://anwarhakim31.github.io/Muslim-App") {
   let getLSperawi = JSON.parse(localStorage.getItem("perawi"));
-  window.location.href = `https://anwarhakimz.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${jumlah}`;
+  window.location.href = `https://anwarhakim31.github.io/Hadist.html?/${getLSperawi.value}/jumlah:${jumlah}`;
 } else if (
   window.location.href ===
-  `https://anwarhakimz.github.io/Muslim-App/Hadist.html?//jumlah:${jumlah}`
+  `https://anwarhakim31.github.io/Muslim-App/Hadist.html?//jumlah:${jumlah}`
 ) {
-  window.location.href = `https://anwarhakimz.github.io/Muslim-App/Hadist.html?/bukhari/jumlah:${jumlah}`;
+  window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/bukhari/jumlah:${jumlah}`;
 }
 
 const nextbtn = document.querySelector(".next-btn");
@@ -74,7 +74,7 @@ pilihPerawi.addEventListener("change", async function () {
   let getLSperawi = JSON.parse(localStorage.getItem("perawi"));
 
   window.location.reload();
-  window.location.href = `https://anwarhakimz.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:100`;
+  window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:100`;
 });
 
 async function getDataHadist() {
@@ -167,13 +167,13 @@ function conditionURL(total, index) {
   if (index > total) {
     index = total;
 
-    window.location.href = `https://anwarhakimz.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${total}`;
+    window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${total}`;
   }
 
   if (index < 1) {
     index = 100;
 
-    window.location.href = `https://anwarhakimz.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${jumlah}`;
+    window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${jumlah}`;
   }
 }
 
@@ -198,7 +198,7 @@ document.addEventListener("click", async function (e) {
     let getLSperawi = JSON.parse(localStorage.getItem("perawi"));
 
     window.location.reload();
-    window.location.href = `https://anwarhakimz.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${index}`;
+    window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${index}`;
   }
 });
 
@@ -217,7 +217,7 @@ document.addEventListener("click", async function (e) {
 
     let getLSperawi = JSON.parse(localStorage.getItem("perawi"));
     window.location.reload();
-    window.location.href = `https://anwarhakimz.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${index}`;
+    window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${index}`;
   }
 });
 
@@ -389,9 +389,9 @@ searchiput.addEventListener("keydown", function (e) {
     console.log(huruf);
 
     if (nomor === undefined) {
-      window.location.href = `https://anwarhakimz.github.io/Muslim-App/Hadist.html?/${huruf}/nomor:100`;
+      window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/${huruf}/nomor:100`;
     } else {
-      window.location.href = `https://anwarhakimz.github.io/Muslim-App/Hadist.html?/hadist/${huruf}/nomor:${nomor}`;
+      window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/hadist/${huruf}/nomor:${nomor}`;
     }
 
     console.log(huruf, nomor);
