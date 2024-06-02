@@ -38,14 +38,14 @@ if (jumlah === null || jumlah === undefined || isNaN(jumlah)) {
   jumlah = 100;
 }
 
-if (window.location.href === "https://anwarhakim31.github.io/Muslim-App") {
+if (window.location.href === "https://anwarhakim31.github.io/MuslimApp") {
   let getLSperawi = JSON.parse(localStorage.getItem("perawi"));
-  window.location.href = `https://anwarhakim31.github.io/Hadist.html?/${getLSperawi.value}/jumlah:${jumlah}`;
+  window.location.href = `https://anwarhakim31.github.io/MuslimApp/Hadist.html?/${getLSperawi.value}/jumlah:${jumlah}`;
 } else if (
   window.location.href ===
-  `https://anwarhakim31.github.io/Muslim-App/Hadist.html?//jumlah:${jumlah}`
+  `https://anwarhakim31.github.io/MuslimApp/Hadist.html?//jumlah:${jumlah}`
 ) {
-  window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/bukhari/jumlah:${jumlah}`;
+  window.location.href = `https://anwarhakim31.github.io/MuslimApp/Hadist.html?/bukhari/jumlah:${jumlah}`;
 }
 
 const nextbtn = document.querySelector(".next-btn");
@@ -74,7 +74,7 @@ pilihPerawi.addEventListener("change", async function () {
   let getLSperawi = JSON.parse(localStorage.getItem("perawi"));
 
   window.location.reload();
-  window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:100`;
+  window.location.href = `https://anwarhakim31.github.io/MuslimApp/Hadist.html?/${getLSperawi.value}/jumlah:100`;
 });
 
 async function getDataHadist() {
@@ -167,7 +167,7 @@ function conditionURL(total, index) {
   if (index > total) {
     index = total;
 
-    window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${total}`;
+    window.location.href = `https://anwarhakim31.github.io/MuslimApp/Hadist.html?/${getLSperawi.value}/jumlah:${total}`;
   }
 
   if (index < 1) {
@@ -198,7 +198,7 @@ document.addEventListener("click", async function (e) {
     let getLSperawi = JSON.parse(localStorage.getItem("perawi"));
 
     window.location.reload();
-    window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${index}`;
+    window.location.href = `https://anwarhakim31.github.io/MuslimApp/Hadist.html?/${getLSperawi.value}/jumlah:${index}`;
   }
 });
 
@@ -217,7 +217,7 @@ document.addEventListener("click", async function (e) {
 
     let getLSperawi = JSON.parse(localStorage.getItem("perawi"));
     window.location.reload();
-    window.location.href = `https://anwarhakim31.github.io/Muslim-App/Hadist.html?/${getLSperawi.value}/jumlah:${index}`;
+    window.location.href = `https://anwarhakim31.github.io/MuslimApp/Hadist.html?/${getLSperawi.value}/jumlah:${index}`;
   }
 });
 
